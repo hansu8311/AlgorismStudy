@@ -41,26 +41,26 @@ public class ex01 {
         
         String[] Boggle_anser = null;
         String[] Boggle_YN = null;
-        sc.nextLine();//엔터 제거
+        sc.nextLine();//���๮�� ����
         
         while(cases_board-- > 0) {
 //        	System.out.println("Boggle_board.length : " + Boggle_board.length);
         	for(int i = 0; i < Boggle_board.length ; i++){
         		String buffer = sc.nextLine();
-
+        		//System.out.println("Boggle_board i �ݺ� : " + i +" : " + buffer);
         		for(int j=0;j<buffer.length();j++){
         		
-        		char ch = buffer.charAt(j); 
+        		char ch = buffer.charAt(j); //charAt�� ������ �ϳ��� ���ھ� �޾ƿ� ch�� ��´�._
 
-		        	if(ch>='a' &&ch<='z') {
-		        		System.out.println("대문자만 입력가능");
+		        	if(ch>='a' &&ch<='z') {//�빮�ڿ� �ҹ��� ���� �ϴ°�
+		        		System.out.println("�빮�ڸ� �Է� �����մϴ�.");
 		        		break;
 		        	}else 
 		        	if(ch>='A'&&ch<='Z'){
 		        		Boggle_board[i][j] = ch;
 		        	}
 		        	else{
-		        		System.out.println("잘못입력.");
+		        		System.out.println("���ڸ� �Է� �����մϴ�.");
 		        		break;
 		        	}
 //	        		System.out.println(ch + "~~");
@@ -78,7 +78,7 @@ public class ex01 {
         	
         	cases_anser = sc.nextInt();
         	
-        	sc.nextLine();
+        	sc.nextLine();//���๮�� ����
         	
         	Boggle_anser = new String[cases_anser];
         	
@@ -124,7 +124,7 @@ public class ex01 {
 //		System.out.println(x + " : " + y + " : " + word);
 		
 		if(!inRange(y, x)) return false;
-//		System.out.println(Boggle_board[x][y] + " : " + word.charAt(0));
+//		System.out.println("�� : " +Boggle_board[x][y] + " : " + word.charAt(0));
 		if(Boggle_board[x][y] != word.charAt(0)) return false;
 		
 		for(int direction = 0; direction < 8; ++direction) {
