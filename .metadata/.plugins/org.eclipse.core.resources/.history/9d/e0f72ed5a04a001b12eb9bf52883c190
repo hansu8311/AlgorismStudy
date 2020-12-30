@@ -121,10 +121,10 @@ public class ex01 {
 		int y=iy;
 		String word=iword;
 		
-//		System.out.println(x + " : " + y + " : " + word);
+		System.out.println(x + " : " + y + " : " + word);
 		
 		if(!inRange(y, x)) return false;
-//		System.out.println("비교 : " +Boggle_board[x][y] + " : " + word.charAt(0));
+		System.out.println("비교 : " +Boggle_board[x][y] + " : " + word.charAt(0));
 		if(Boggle_board[x][y] != word.charAt(0)) return false;
 		
 		for(int direction = 0; direction < 8; ++direction) {

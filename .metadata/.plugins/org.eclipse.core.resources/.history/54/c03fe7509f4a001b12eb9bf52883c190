@@ -47,7 +47,7 @@ public class ex01 {
 //        	System.out.println("Boggle_board.length : " + Boggle_board.length);
         	for(int i = 0; i < Boggle_board.length ; i++){
         		String buffer = sc.nextLine();
-        		//System.out.println("Boggle_board i 반복 : " + i +" : " + buffer);
+        		System.out.println("Boggle_board i 반복 : " + i +" : " + buffer);
         		for(int j=0;j<buffer.length();j++){
         		
         		char ch = buffer.charAt(j); //charAt는 라인중 하나의 문자씩 받아와 ch에 담는다._
@@ -74,7 +74,7 @@ public class ex01 {
 //        			System.out.println(); 
 //        	}
         	
-        	//System.out.println("BOARD_END"); 
+        	System.out.println("BOARD_END"); 
         	
         	cases_anser = sc.nextInt();
         	
@@ -84,7 +84,7 @@ public class ex01 {
         	
         	Boggle_YN = new String[cases_anser];
 
-        	//System.out.println("cases_anser : " + cases_anser);
+        	System.out.println("cases_anser : " + cases_anser);
 	        for(int i = 0; i < Boggle_anser.length ; i++){
 	        		
 	        	String buffer = sc.nextLine();
@@ -109,7 +109,7 @@ public class ex01 {
         	
         	
         	for(int i = 0; i < Boggle_anser.length ; i++){
-        		System.out.println(Boggle_anser[i] + " " + Boggle_YN[i]) ;
+        		System.out.println("final : "+Boggle_anser[i] + " : " + Boggle_YN[i]) ;
         	}
         	
         }
@@ -121,10 +121,10 @@ public class ex01 {
 		int y=iy;
 		String word=iword;
 		
-//		System.out.println(x + " : " + y + " : " + word);
+		System.out.println(x + " : " + y + " : " + word);
 		
 		if(!inRange(y, x)) return false;
-//		System.out.println("비교 : " +Boggle_board[x][y] + " : " + word.charAt(0));
+		
 		if(Boggle_board[x][y] != word.charAt(0)) return false;
 		
 		for(int direction = 0; direction < 8; ++direction) {
@@ -138,7 +138,7 @@ public class ex01 {
 		int x = ix;
 		int y = iy;
 		
-		if(x >= 0 && x < 5 && y >= 0 &&  y<5) return true;
+		if(x > 0 && x < 5 && y > 0 &&  y<5) return true;
 		else return false;
 	}
 }
