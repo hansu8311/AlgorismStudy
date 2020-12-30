@@ -120,7 +120,7 @@ public class ex01 {
 		int x=ix;
 		int y=iy;
 		String word=iword;
-		
+		 
 //		System.out.println(x + " : " + y + " : " + word);
 		
 		if(!inRange(y, x)) return false;
